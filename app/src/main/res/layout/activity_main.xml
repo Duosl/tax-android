@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF2F5"
+    tools:context=".view.MainActivity">
+
+    <!--<include layout="@layout/action_bar_fragment"/>-->
+    <fragment
+        android:tag="action_bar_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:name="com.meituan.android.tax_calculator.view.ActionBarFragment"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <include layout="@layout/header_layout"/>
+
+            <include layout="@layout/base_info"/>
+
+            <include layout="@layout/special_info"/>
+
+            <include layout="@layout/bottom_layout"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

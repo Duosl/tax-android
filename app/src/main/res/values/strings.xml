@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">简捷版2019新个税计算器</string>
+    <string name="loading">加载中...</string>
+
+    <string name="header_title">算算收入多了多少钱</string>
+    <string name="header_subtitle">最新个税政策 新税率+专项附加扣除</string>
+    <string name="basic_notice">* 简捷版个税计算结果仅供参考，税务总局权威版请下载“个人所得税”官方APP。</string>
+
+    <string name="rule_titile">最新个人所得税政策解读</string>
+
+    <string name="income">¥%1.2f</string>
+    <string name="over">超过全国 %1$s的人, %2$s！\n %3$s</string>
+
+</resources>

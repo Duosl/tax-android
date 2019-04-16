@@ -1,0 +1,102 @@
+[
+  {
+    "title": "我有3岁以上正在接受教育的子女",
+    "action": "updateChildEdu",
+    "resultMoney": "1000",
+    "hasChildView": true,
+    "prefix": "子女数量",
+    "childList": [
+      {
+        "title": "1",
+        "payload": 1,
+        "money": "1000"
+      },
+      {
+        "title": "2",
+        "payload": 2,
+        "money": "2000"
+      },
+      {
+        "title": "3",
+        "payload": 3,
+        "money": "3000"
+      },
+      {
+        "title": "4",
+        "payload": 4,
+        "money": "4000"
+      },
+      {
+        "title": "5",
+        "payload": 5,
+        "money": "5000"
+      }
+    ]
+  },
+  {
+    "title": "我正在接受继续教育",
+    "action": "updateContinueEdu",
+    "resultMoney": "400",
+    "hasChildView": true,
+    "childList": [
+      {
+        "title": "学历继续教育",
+        "payload": "edu_type_academic_edu",
+        "money": "400"
+      },
+      {
+        "title": "职业资格证书教育",
+        "payload": "edu_type_skill_edu",
+        "money": "300"
+      }
+    ]
+  },
+  {
+    "title": "我有60岁及以上的父母",
+    "action": "updateSupportOldManValue",
+    "resultMoney": "2000",
+    "hasChildView": true,
+    "childList": [
+      {
+        "title": "我是独生子女",
+        "payload": 2000,
+        "money": "2000"
+      },
+      {
+        "title": "我不是独生子女",
+        "payload": 1000,
+        "money": "1000"
+      }
+    ]
+  },
+  {
+    "title": "我正在还首套房贷",
+    "action": "updateMortgageHouse",
+    "payload": 1000,
+    "resultMoney": "1000",
+    "hasChildView": false
+  },
+  {
+    "title": "我在工作城市租房",
+    "resultMoney": "1500",
+    "action": "updateRentHouse",
+    "hasChildView": true,
+    "childList": [
+      {
+        "title": "直辖市、省会城市",
+        "payload": "city_type_big",
+        "money": "1500"
+      },
+      {
+        "title": "市辖区户籍人口超过100万",
+        "payload": "city_type_normal",
+        "money": "1100"
+      },
+      {
+        "title": "市辖区户籍人口未超100万",
+        "payload": "city_type_small",
+        "money": "800"
+      }
+    ]
+  }
+]

@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="-20dp"
+    android:layout_marginHorizontal="15dp"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_corner">
+
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textColor="#1576DE"
+        android:layout_marginBottom="10dp"
+        android:textSize="14sp"
+        android:text="@string/basic_notice"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="税前月收入"
+            android:textColor="#666"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="¥"
+                android:textColor="#333"
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/salary_input"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="请输入税前月收入"
+                android:background="@drawable/input_without_border"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <include layout="@layout/split_line"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="所在城市"
+            android:textColor="#666"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/city_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/city_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="北京"
+                android:textColor="#666"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-5dp"
+                android:background="@drawable/ic_right" />
+        </LinearLayout>
+
+        <include layout="@layout/split_line"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="公积金"
+            android:textSize="12sp"
+            android:textColor="#666"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/gjj_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gjj_base_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:text="@string/loading"
+                android:textColor="#333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/gjj_ratio_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/loading"
+                android:textColor="#333"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/gjj_layout_more"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="-8dp"
+                android:background="@drawable/ic_down" />
+        </LinearLayout>
+
+        <include layout="@layout/split_line"/>
+
+        <LinearLayout
+            android:id="@+id/gjj_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_corner2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:textColor="#000"
+                    android:text="公积金缴纳基数"/>
+
+                <EditText
+                    android:id="@+id/gjj_base_input"
+                    android:inputType="number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_without_border"
+                    android:gravity="end"
+                    android:hint="公积金缴纳基数"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gjj_ratio_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_corner2"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:textColor="#000"
+                    android:text="公积金缴纳比例(%)"/>
+
+                <TextView
+                    android:id="@+id/gjj_ratio_input"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/loading"
+                    android:textColor="#000"
+                    android:textSize="12sp" />
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="-5dp"
+                    android:background="@drawable/ic_right"/>
+            </LinearLayout>
+
+            <include layout="@layout/split_line"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="社保"
+            android:textColor="#666"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/sb_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sb_base_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1"
+                android:paddingBottom="5dp"
+                android:text="@string/loading"
+                android:textColor="#333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/sb_ratio_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingBottom="5dp"
+                android:text="@string/loading"
+                android:textColor="#333"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/sb_layout_more"
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="-8dp"
+                android:background="@drawable/ic_down"/>
+        </LinearLayout>
+
+        <include layout="@layout/split_line"/>
+
+        <LinearLayout
+            android:id="@+id/sb_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_corner2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:textColor="#000"
+                    android:text="社保缴纳基数"/>
+
+                <EditText
+                    android:id="@+id/sb_base_input"
+                    android:inputType="number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_without_border"
+                    android:gravity="end"
+                    android:hint="社保缴纳基数"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/shape_corner2"
+                android:layout_marginBottom="10dp">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:gravity="start"
+                    android:textColor="#000"
+                    android:text="社保缴纳比例(%)"/>
+
+                <EditText
+                    android:id="@+id/sb_ratio_input"
+                    android:inputType="numberDecimal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/loading"
+                    android:textColor="#000"
+                    android:background="@drawable/input_without_border"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <include layout="@layout/split_line"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="年终奖"
+            android:textColor="#666"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="¥"
+                android:textColor="#333"
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/nzj_input"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="请输入年终奖"
+                android:textSize="16sp"
+                android:background="@drawable/input_without_border"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <include layout="@layout/split_line"/>
+
+    </LinearLayout>
+
+</LinearLayout>

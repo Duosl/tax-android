@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF2F5"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    tools:context=".view.ResultActivity">
+
+    <fragment
+        android:id="@+id/action_bar"
+        android:name="com.meituan.android.tax_calculator.view.ActionBarFragment"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:tag="action_bar_fragment" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="70dp">
+
+            <include layout="@layout/show_result_sec1" />
+
+            <include layout="@layout/show_result_sec2" />
+
+            <include layout="@layout/show_result_sec3" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="10dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#AAEEEEEE">
+        <Button
+            android:id="@+id/result_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corner3"
+            android:text="邀请好友测一测"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
